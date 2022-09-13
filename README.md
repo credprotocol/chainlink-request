@@ -28,7 +28,7 @@ We plan to switch to Arbitrum Goerli right after Chainlink starts supporting tha
 ###  🚁 Smart contract deployment
 Open up our repo in Remix:
 
-<add_link>
+https://remix.ethereum.org/#url=https://github.com/credprotocol/chainlink-request/blob/master/contracts/Requester.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js
 
 1. On the Compile tab, click the Compile button for `Requester.sol`. Remix automatically selects the compiler version and language from the pragma line in the smart contract unless you select a specific version manually.
 2. On the Deploy and Run tab, configure the following settings:
