@@ -22,7 +22,7 @@ contract Requester is ChainlinkClient, ConfirmedOwner {
      * Fee: 0.1 LINK
      */
     constructor() ConfirmedOwner(msg.sender) {
-        setChainlinkToken(0xd14838a68e8afbade5efb411d5871ea0011afd28);
+        setChainlinkToken(0xd14838A68E8AFBAdE5efb411d5871ea0011AFd28);
         oracle = 0xAB8E43Bfc194cC1Fba6bABA2eB19CD5147DE9233;
         jobId = '4edf5606607b4521a83ff313a09e2606';
         fee = 0.1 * 10 ** 18;
