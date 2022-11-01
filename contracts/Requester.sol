@@ -16,14 +16,24 @@ contract Requester is ChainlinkClient, ConfirmedOwner {
     event RequestCredScoreFulfilled(bytes32 indexed requestId, uint256 indexed score);
 
     /**
+     * Network: Arbitrum One
+     * Oracle: 0x70f21bb873e3e9fe92f48fd98c1db2827a6155c8
+     * Job ID: 4edf5606607b4521a83ff313a09e2606
+     * Fee: 0.1 LINK
+     * Token Address: 0xf97f4df75117a78c1A5a0DBb814Af92458539FB4
+     */
+     *
+     * ----------------
+     *
      * Network: Arbitrum Goerli
      * Oracle: 0xAB8E43Bfc194cC1Fba6bABA2eB19CD5147DE9233
      * Job ID: 4edf5606607b4521a83ff313a09e2606
      * Fee: 0.1 LINK
+     * Token Address: 0xd14838A68E8AFBAdE5efb411d5871ea0011AFd28
      */
     constructor() ConfirmedOwner(msg.sender) {
-        setChainlinkToken(0xd14838A68E8AFBAdE5efb411d5871ea0011AFd28);
-        oracle = 0xAB8E43Bfc194cC1Fba6bABA2eB19CD5147DE9233;
+        setChainlinkToken(0xf97f4df75117a78c1A5a0DBb814Af92458539FB4);
+        oracle = 0x70f21bb873e3e9fe92f48fd98c1db2827a6155c8;
         jobId = '4edf5606607b4521a83ff313a09e2606';
         fee = 0.1 * 10 ** 18;
     }
