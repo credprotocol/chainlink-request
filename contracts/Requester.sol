@@ -17,18 +17,18 @@ contract Requester is ChainlinkClient, ConfirmedOwner {
 
     /**
      * Network: Arbitrum One
+     * Token Address: 0xf97f4df75117a78c1A5a0DBb814Af92458539FB4
      * Oracle: 0x70f21Bb873E3e9fE92f48fD98C1dB2827A6155C8
      * Job ID: 4edf5606607b4521a83ff313a09e2606
      * Fee: 0.1 LINK
-     * Token Address: 0xf97f4df75117a78c1A5a0DBb814Af92458539FB4
      *
      * ----------------
      *
      * Network: Arbitrum Goerli
+     * Token Address: 0xd14838A68E8AFBAdE5efb411d5871ea0011AFd28
      * Oracle: 0xAB8E43Bfc194cC1Fba6bABA2eB19CD5147DE9233
      * Job ID: 4edf5606607b4521a83ff313a09e2606
      * Fee: 0.1 LINK
-     * Token Address: 0xd14838A68E8AFBAdE5efb411d5871ea0011AFd28
      */
     constructor() ConfirmedOwner(msg.sender) {
         setChainlinkToken(0xf97f4df75117a78c1A5a0DBb814Af92458539FB4);
