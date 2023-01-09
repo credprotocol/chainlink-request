@@ -29,10 +29,18 @@ contract Requester is ChainlinkClient, ConfirmedOwner {
      * Oracle: 0xAB8E43Bfc194cC1Fba6bABA2eB19CD5147DE9233
      * Job ID: 4edf5606607b4521a83ff313a09e2606
      * Fee: 0.1 LINK
+     *
+     * ----------------
+     *
+     * Network: Polygon Mumbai
+     * Token Address: 0x326C977E6efc84E512bB9C30f76E30c160eD06FB
+     * Oracle: 0xA010e2CD70e76F3d8Ac6159f33aA716F95435ff2
+     * Job ID: 4edf5606607b4521a83ff313a09e2606
+     * Fee: 0.1 LINK
      */
     constructor() ConfirmedOwner(msg.sender) {
-        setChainlinkToken(0xf97f4df75117a78c1A5a0DBb814Af92458539FB4);
-        oracle = 0x70f21Bb873E3e9fE92f48fD98C1dB2827A6155C8;
+        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
+        oracle = 0xA010e2CD70e76F3d8Ac6159f33aA716F95435ff2;
         jobId = '4edf5606607b4521a83ff313a09e2606';
         fee = 0.1 * 10 ** 18;
     }

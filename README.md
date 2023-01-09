@@ -21,8 +21,7 @@ The whole background process is automatic and there is only a couple of steps ex
 
 ##  ⛓️ What chain is this supported by?
 
-For now, our code is supported by Arbitrum Rinkeby. 
-We plan to switch to Arbitrum Goerli right after Chainlink starts supporting that testnet and we will also deploy on Arbitrum One in the near future.
+For the full list of supported chains, please check out our [GitBook - Supported Chains](https://docs.credprotocol.com/developers/credit-oracles/supported-chains) page.
 
 ##  🔨️ How to use the Cred Protocol Chainlink Requester
 ###  🚁 Smart contract deployment
@@ -30,21 +29,23 @@ Open up our repo in Remix:
 
 https://remix.ethereum.org/#url=https://github.com/credprotocol/chainlink-request/blob/master/contracts/Requester.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js
 
-1. On the Compile tab, click the Compile button for `Requester.sol`. Remix automatically selects the compiler version and language from the pragma line in the smart contract unless you select a specific version manually.
+1. Make sure to **replace** the constructor address - setChainlinkToken() and oracle addresses in particular - with the ones of the network you want to deploy to.
+2. On the Compile tab, click the Compile button for `Requester.sol`. Remix automatically selects the compiler version and language from the pragma line in the smart contract unless you select a specific version manually.
 2. On the Deploy and Run tab, configure the following settings:
    1. Select "Injected Provider" as your Environment. The Javascript VM environment cannot access your oracle node. 
    2. Select the `Requester` contract from the Contract menu.
 3. Click Deploy. MetaMask prompts you to confirm the transaction.
-4. After you deploy the contract, a link to Etherscan displays at the bottom. Open that link in a new tab to keep track of the transaction.
+4. After you deploy the contract, a link to Etherscan (or another explorer related to the chain) displays at the bottom. Open that link in a new tab to keep track of the transaction.
 5. If the transaction is successful, a new address displays in the Deployed Contracts section.
 
 ###  ✋ Request your Cred score
 
-In order to get the request fulfilled, you need to send some LINK to your smart contract.
+In order to get the request fulfilled, you **need to send some LINK to your smart contract**.
 One request is 0.1 LINK so the amount is up to you - it works like a top-up phone, you can pay for your requests in advance. 
 If you try to request your Cred score and the smart contract does not have enough LINK, it will give you a gasEstimation error.
 The address of the smart contract can be found in the Deployed Contracts section - you can copy it into your clipboard from there.
 
+(If you are about to integrate with us on Arbitrum Goerli)
 You can learn how to get LINK testnet tokens in your Metamask in the first guide of our Cred Oracle Integration series: 
 https://credprotocol.medium.com/how-to-get-arbitrum-testnet-eth-and-other-tokens-in-5-minutes-28b6851cb4af.
 
